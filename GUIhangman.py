@@ -1,4 +1,5 @@
 import tkinter as tk
+import tkinter.messagebox as messagebox
 
 from hangman import (build_guessed_word, game_over, join_guessed_letters,
                      select_word, validate_guess)
@@ -34,7 +35,7 @@ class HangmanGUI:
             if game_over(self.wrong_guesses, self.target_word, self.guessed_letters):
                 self.guess_button.config(state="disabled")
         else:
-            tk.messagebox.showerror("Invalid guess", "Please enter a single, unguessed lowercase letter.")
+            messagebox.showerror("Invalid guess", "Please enter a single, unguessed lowercase letter.")
         self.update_display()
 
     def start_new_game(self):
