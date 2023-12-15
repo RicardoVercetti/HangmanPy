@@ -1,4 +1,5 @@
 import tkinter as tk
+import tkinter.messagebox as messagebox
 
 from hangman import (build_guessed_word, game_over, join_guessed_letters,
                      select_word, validate_guess)
